@@ -1,0 +1,9 @@
+#Block Names
+tile.CrazyJar.essentiaJar1.name=Essentia Jar Lv1
+tile.CrazyJar.essentiaJar2.name=Essentia Jar Lv2
+tile.CrazyJar.essentiaJar3.name=Essentia Jar Lv3
+tile.CrazyJar.essentiaJar4.name=Essentia Jar Lv4
+tile.CrazyJar.essentiaJar5.name=Essentia Jar Lv5
+
+#Creative Tab
+itemGroup.CrazyJar=Crazy Jar

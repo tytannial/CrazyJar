@@ -1,0 +1,16 @@
+[
+{
+  "modid": "CrazyJar",
+  "name": "Karlock's Crazy Jar",
+  "description": "Add more Essentia jar for thaumcraft.",
+  "version": "1.7.10-alpha0.1",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Karlock"],
+  "credits": "Thaumcraft, Technomancy",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["Thaumcraft"]
+}
+]

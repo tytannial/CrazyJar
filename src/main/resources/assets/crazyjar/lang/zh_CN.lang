@@ -1,0 +1,10 @@
+#Block Names
+tile.CrazyJar.essentiaJar1.name=源质瓶Lv1
+tile.CrazyJar.essentiaJar2.name=源质瓶Lv2
+tile.CrazyJar.essentiaJar3.name=源质瓶Lv3
+tile.CrazyJar.essentiaJar4.name=源质瓶Lv4
+tile.CrazyJar.essentiaJar5.name=源质瓶Lv5
+
+
+#Creative Tab
+itemGroup.CrazyJar=疯狂的罐子
