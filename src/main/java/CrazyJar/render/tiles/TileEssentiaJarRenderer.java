@@ -21,8 +21,7 @@ import thaumcraft.common.config.Config;
 public class TileEssentiaJarRenderer extends TileEntitySpecialRenderer {
 
     ModelEssentiaContainer model = new ModelEssentiaContainer();
-    protected int type;
-
+    
     private static final ResourceLocation[] modelTexture = new ResourceLocation[]{
             new ResourceLocation(Reference.MODEL_ESSENTIA_Jar1_TEXTURE),
             new ResourceLocation(Reference.MODEL_ESSENTIA_Jar2_TEXTURE),

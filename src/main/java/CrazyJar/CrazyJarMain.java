@@ -9,6 +9,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -31,14 +32,17 @@ public class CrazyJarMain {
     public static Logger logger;
 
 
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+    }
+
     @EventHandler
     public void init(FMLInitializationEvent event) {
 
         proxy.initRenderers();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
         Thaumcraft.getInstance().RegisterMods();
-        //waila兼容
-        //FMLInterModComms.sendMessage("Waila", "register", "theflogat.technomancy.lib.compat.waila.WailaProvider.callbackRegister");
 
         System.out.println("CrazyJar Initialization");
     }

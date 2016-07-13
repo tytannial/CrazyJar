@@ -20,4 +20,14 @@ public class Reference {
     public static final String MODEL_ESSENTIA_Jar3_TEXTURE = MODEL_PREFIX + "essentiaJar3.png";
     public static final String MODEL_ESSENTIA_Jar4_TEXTURE = MODEL_PREFIX + "essentiaJar4.png";
     public static final String MODEL_ESSENTIA_Jar5_TEXTURE = MODEL_PREFIX + "essentiaJar5.png";
+
+    //方块名称
+    public static final String essentiaJar1 = "essentiaJar1";
+    public static final String essentiaJar2 = "essentiaJar2";
+    public static final String essentiaJar3 = "essentiaJar3";
+    public static final String essentiaJar4 = "essentiaJar4";
+    public static final String essentiaJar5 = "essentiaJar5";
+
+    //方块注册ID
+    public static int idEssentiaJar;
 }

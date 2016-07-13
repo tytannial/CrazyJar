@@ -1,7 +1,7 @@
 package CrazyJar.register;
 
 import CrazyJar.block.*;
-import CrazyJar.lib.Names;
+import CrazyJar.lib.Reference;
 import CrazyJar.storage.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -58,11 +58,11 @@ public class Thaumcraft {
         essentiaJar4 = new BlockEssentiaJar(3);
         essentiaJar5 = new BlockEssentiaJar(4);
 
-        _BlockRegister(essentiaJar1, Names.essentiaJar1);
-        _BlockRegister(essentiaJar2, Names.essentiaJar2);
-        _BlockRegister(essentiaJar3, Names.essentiaJar3);
-        _BlockRegister(essentiaJar4, Names.essentiaJar4);
-        _BlockRegister(essentiaJar5, Names.essentiaJar5);
+        _BlockRegister(essentiaJar1, Reference.essentiaJar1);
+        _BlockRegister(essentiaJar2, Reference.essentiaJar2);
+        _BlockRegister(essentiaJar3, Reference.essentiaJar3);
+        _BlockRegister(essentiaJar4, Reference.essentiaJar4);
+        _BlockRegister(essentiaJar5, Reference.essentiaJar5);
 
         _TileEntityRegister(essentiaJar1, TileEssentiaJar.class, "TileEssentiaJar");
         _TileEntityRegister(essentiaJar2, TileEssentiaJar.class, "TileEssentiaJar2");

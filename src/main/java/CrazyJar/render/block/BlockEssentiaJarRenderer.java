@@ -1,6 +1,6 @@
 package CrazyJar.render.block;
 
-import CrazyJar.lib.RenderIds;
+import CrazyJar.lib.Reference;
 import CrazyJar.storage.TileEssentiaJar;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;
@@ -38,7 +38,7 @@ public class BlockEssentiaJarRenderer implements ISimpleBlockRenderingHandler {
 
     @Override
     public int getRenderId() {
-        return RenderIds.idEssentiaJar1;
+        return Reference.idEssentiaJar;
     }
 
 }

@@ -1,7 +1,6 @@
 package CrazyJar.block;
 
 import CrazyJar.lib.Reference;
-import CrazyJar.lib.RenderIds;
 import CrazyJar.register.Thaumcraft;
 import CrazyJar.storage.TileEssentiaJar;
 import cpw.mods.fml.relauncher.Side;
@@ -201,7 +200,7 @@ public class BlockEssentiaJar extends BlockContainerExpand {
 
     @Override
     public int getRenderType() {
-        return RenderIds.idEssentiaJar1;
+        return Reference.idEssentiaJar;
     }
 
     public void setAspects(ItemStack itemstack, AspectList aspects) {

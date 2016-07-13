@@ -1,6 +1,6 @@
 package CrazyJar.proxy;
 
-import CrazyJar.lib.RenderIds;
+import CrazyJar.lib.Reference;
 import CrazyJar.render.block.*;
 import CrazyJar.render.tiles.*;
 import CrazyJar.storage.*;
@@ -17,7 +17,7 @@ public class ClientProxy extends CommonProxy {
 
     public void initRenderers() {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEssentiaJar.class, new TileEssentiaJarRenderer());
-        RenderIds.idEssentiaJar1 = RenderingRegistry.getNextAvailableRenderId();
+        Reference.idEssentiaJar = RenderingRegistry.getNextAvailableRenderId();
 
         RenderingRegistry.registerBlockHandler(new BlockEssentiaJarRenderer(0));
         RenderingRegistry.registerBlockHandler(new BlockEssentiaJarRenderer(1));
