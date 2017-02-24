@@ -8,6 +8,7 @@ A Thaumcraft addon provide some bigger essentia jars.
 源质罐 Lv4 提供1024容量  
 源质罐 Lv5 提供2048容量  
 
-待解决的问题：  
-[x]游戏关闭罐中源质将会消失  
-[ ]没有为源质罐制作新的贴图使用的Technomancy的贴图  
+##需解决的问题：  
+- [x] 游戏关闭罐中源质将会消失
+- [ ] 没有为源质罐等级制作不同贴图
+- [ ] 没有进行深度测试
