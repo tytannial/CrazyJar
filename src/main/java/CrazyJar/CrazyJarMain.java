@@ -32,7 +32,6 @@ public class CrazyJarMain {
     public static Logger logger;
 
 
-
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     }

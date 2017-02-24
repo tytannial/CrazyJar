@@ -16,6 +16,7 @@ buildscript {
 }
 
 apply plugin: 'forge'
+apply plugin: 'idea'
 
 version = "1.7.10-alpha-0.1"
 group = "com.Karlock.CrazyJar" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -52,7 +53,7 @@ processResources
                 exclude 'mcmod.info'
             }
         }
-		
+
 idea {
     module {
         inheritOutputDirs = true

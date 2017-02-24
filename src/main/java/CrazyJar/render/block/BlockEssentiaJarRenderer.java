@@ -13,8 +13,8 @@ public class BlockEssentiaJarRenderer implements ISimpleBlockRenderingHandler {
 
     private int BlockType;
 
-    public BlockEssentiaJarRenderer(int type){
-        BlockType=type;
+    public BlockEssentiaJarRenderer(int type) {
+        BlockType = type;
     }
 
     @Override

@@ -7,11 +7,12 @@ import thaumcraft.common.tiles.TileJarFillable;
 
 public class TileEssentiaJar extends TileJarFillable implements IAspectSource, IEssentiaTransport {
 
-    public int[] max = {128,256,512,1024,2048};
+    public int[] max = {128, 256, 512, 1024, 2048};
 
-    public int type=0;
+    public int type = 0;
 
     public TileEssentiaJar() {
+        //Don't remove this function
         //System.out.println("DEBUG: TileEssentiaJar Constracted");
     }
 
