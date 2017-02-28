@@ -1,7 +1,7 @@
 package CrazyJar.storage;
 
-public class TileEssentiaJar2 extends TileEssentiaJar {
-    public TileEssentiaJar2() {
-        super(0);
+public class TileEssentiaJar5 extends TileEssentiaJar {
+    public TileEssentiaJar5() {
+        super(4);
     }
 }

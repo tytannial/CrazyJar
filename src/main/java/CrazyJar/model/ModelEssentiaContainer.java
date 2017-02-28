@@ -8,8 +8,8 @@ public class ModelEssentiaContainer extends ModelBase {
     private ModelRenderer Lid;
 
     public ModelEssentiaContainer() {
-        textureWidth = 64;
-        textureHeight = 32;
+        super.textureWidth = 64;
+        super.textureHeight = 32;
 
         Core = new ModelRenderer(this, 0, 10);
         Core.addBox(-5F, -6F, -5F, 10, 12, 10);

@@ -69,8 +69,10 @@ public class TileEssentiaJarRenderer extends TileEntitySpecialRenderer {
             float rot = (((TileEssentiaJar) tile).aspectFilter.getTag().hashCode() + ((TileEssentiaJar) tile).xCoord + ((TileEssentiaJar) tile).facing) % 4 - 2;
 
             GL11.glPushMatrix();
+            if (Config.crooked) {
+                GL11.glRotatef(rot, 0.0F, 0.0F, 1.0F);
+            }
             GL11.glTranslatef(0.0F, -0.4F, 0.315F);
-            if (Config.crooked) GL11.glRotatef(rot, 0.0F, 0.0F, 1.0F);
             GL11.glRotatef(180F, 0F, 1F, 0F);
             GL11.glDisable(GL11.GL_LIGHTING);
             UtilsFX.renderQuadCenteredFromTexture("textures/models/label.png", 0.5F, 1.0F, 1.0F, 1.0F, -99, 771, 1.0F);
@@ -80,7 +82,9 @@ public class TileEssentiaJarRenderer extends TileEntitySpecialRenderer {
 
             GL11.glPushMatrix();
             GL11.glTranslatef(0.0F, -0.4F, 0.316F);
-            if (Config.crooked) GL11.glRotatef(rot, 0.0F, 0.0F, 1.0F);
+            if (Config.crooked) {
+                GL11.glRotatef(rot, 0.0F, 0.0F, 1.0F);
+            }
             GL11.glScaled(0.021D, 0.021D, 0.021D);
             GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
 

@@ -64,10 +64,10 @@ public class Thaumcraft {
         _BlockRegister(essentiaJar4, Reference.essentiaJar4);
         _BlockRegister(essentiaJar5, Reference.essentiaJar5);
 
-        _TileEntityRegister(essentiaJar1, TileEssentiaJar.class, "TileEssentiaJar");
-        _TileEntityRegister(essentiaJar2, TileEssentiaJar.class, "TileEssentiaJar2");
-        _TileEntityRegister(essentiaJar3, TileEssentiaJar.class, "TileEssentiaJar3");
-        _TileEntityRegister(essentiaJar4, TileEssentiaJar.class, "TileEssentiaJar4");
-        _TileEntityRegister(essentiaJar5, TileEssentiaJar.class, "TileEssentiaJar5");
+        _TileEntityRegister(essentiaJar1, TileEssentiaJar1.class, "TileEssentiaJar1");
+        _TileEntityRegister(essentiaJar2, TileEssentiaJar2.class, "TileEssentiaJar2");
+        _TileEntityRegister(essentiaJar3, TileEssentiaJar3.class, "TileEssentiaJar3");
+        _TileEntityRegister(essentiaJar4, TileEssentiaJar4.class, "TileEssentiaJar4");
+        _TileEntityRegister(essentiaJar5, TileEssentiaJar5.class, "TileEssentiaJar5");
     }
 }

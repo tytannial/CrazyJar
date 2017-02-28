@@ -1,7 +1,7 @@
 package CrazyJar.render.block;
 
 import CrazyJar.lib.Reference;
-import CrazyJar.storage.TileEssentiaJar;
+import CrazyJar.storage.*;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -21,7 +21,33 @@ public class BlockEssentiaJarRenderer implements ISimpleBlockRenderingHandler {
     public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer) {
         GL11.glPushMatrix();
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
-        TileEssentiaJar te = new TileEssentiaJar(BlockType);
+        TileEssentiaJar te;
+        switch (BlockType) {
+            case 0: {
+                te = new TileEssentiaJar1();
+                break;
+            }
+            case 1: {
+                te = new TileEssentiaJar2();
+                break;
+            }
+            case 2: {
+                te = new TileEssentiaJar3();
+                break;
+            }
+            case 3: {
+                te = new TileEssentiaJar4();
+                break;
+            }
+            case 4: {
+                te = new TileEssentiaJar5();
+                break;
+            }
+            default: {
+                te = new TileEssentiaJar1();
+                break;
+            }
+        }
         TileEntityRendererDispatcher.instance.renderTileEntityAt(te, 0.0D, 0.0D, 0.0D, 0.0F);
         GL11.glPopMatrix();
     }

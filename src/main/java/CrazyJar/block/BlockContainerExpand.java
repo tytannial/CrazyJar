@@ -5,7 +5,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -17,6 +16,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 import org.lwjgl.input.Keyboard;
+import thaumcraft.common.blocks.CustomStepSound;
 
 import java.util.ArrayList;
 
@@ -27,8 +27,9 @@ public abstract class BlockContainerExpand extends BlockContainer {
 
     public BlockContainerExpand() {
         super(Material.iron);
+        setStepSound(new CustomStepSound("jar", 1.0F, 1.0F));
         setCreativeTab(CrazyJarMain.tabsTM);
-        setHardness(2F);
+        setHardness(2.0F);
         this.dummy = createNewTileEntity(null, 0);
     }
 
@@ -61,52 +62,6 @@ public abstract class BlockContainerExpand extends BlockContainer {
             items.stackTagCompound.setInteger("z", z);
             if (w.getTileEntity(x, y, z) != null) {
                 w.getTileEntity(x, y, z).readFromNBT(items.stackTagCompound);
-            }
-        }
-    }
-
-    @Override
-    public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-        TileEntity te = w.getTileEntity(x, y, z);
-        ItemStack items = player.inventory.mainInventory[player.inventory.currentItem];
-        return super.onBlockActivated(w, x, y, z, player, side, hitX, hitY, hitZ);
-    }
-
-    public void getNBTInfo(NBTTagCompound comp, ArrayList<String> l, int meta) {
-        dummy.readFromNBT(comp);
-        if (dummy instanceof thaumcraft.api.aspects.IAspectContainer) {
-            if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
-                thaumcraft.api.aspects.AspectList al = ((thaumcraft.api.aspects.IAspectContainer) dummy).getAspects();
-                for (thaumcraft.api.aspects.Aspect as : al.getAspects()) {
-                    if (al.getAmount(as) > 0) {
-                        l.add(as.getName() + ":" + al.getAmount(as));
-                    }
-                }
-            } else {
-                l.add(EnumChatFormatting.WHITE.toString() + EnumChatFormatting.ITALIC + StatCollector.translateToLocal("info.techno:a"));
-            }
-        }
-        if (dummy instanceof IInventory) {
-            if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL) || Keyboard.isKeyDown(Keyboard.KEY_RCONTROL)) {
-                NBTTagList list = comp.getTagList("Items", 10);
-                for (int i = 0; i < list.tagCount(); i++) {
-                    NBTTagCompound stack = list.getCompoundTagAt(i);
-                    byte slot = stack.getByte("Slot");
-                    if ((slot >= 0) && (slot < ((IInventory) dummy).getSizeInventory())) {
-                        ItemStack it = ItemStack.loadItemStackFromNBT(stack);
-                        l.add(it.getDisplayName() + " " + it.stackSize);
-                    }
-                }
-            } else {
-                l.add(EnumChatFormatting.WHITE.toString() + EnumChatFormatting.ITALIC + StatCollector.translateToLocal("info.techno:ctrl"));
-            }
-        }
-        if (dummy instanceof IFluidHandler) {
-            FluidTankInfo[] infoTanks = ((IFluidHandler) dummy).getTankInfo(null);
-            for (FluidTankInfo info : infoTanks) {
-                if (info.fluid != null) {
-                    l.add(info.fluid.getLocalizedName() + ": " + info.fluid.amount + "/" + info.capacity);
-                }
             }
         }
     }

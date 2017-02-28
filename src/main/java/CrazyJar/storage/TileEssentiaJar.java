@@ -18,6 +18,7 @@ public class TileEssentiaJar extends TileJarFillable implements IAspectSource, I
 
     public TileEssentiaJar(int type) {
         this.maxAmount = this.max[type];
+        this.type = type;
     }
 
     @Override

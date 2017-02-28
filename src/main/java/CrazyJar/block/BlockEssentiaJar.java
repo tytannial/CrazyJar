@@ -2,7 +2,7 @@ package CrazyJar.block;
 
 import CrazyJar.lib.Reference;
 import CrazyJar.register.Thaumcraft;
-import CrazyJar.storage.TileEssentiaJar;
+import CrazyJar.storage.*;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
@@ -25,8 +25,7 @@ import thaumcraft.api.aspects.IEssentiaContainerItem;
 import java.util.ArrayList;
 
 public class BlockEssentiaJar extends BlockContainerExpand {
-
-    public static BlockContainer instance;
+    //    public static BlockContainer instance;
     private int titleType;
     private String[] namelist = new String[]{"essentiaJar1", "essentiaJar2", "essentiaJar3", "essentiaJar4", "essentiaJar5"};
 
@@ -185,7 +184,26 @@ public class BlockEssentiaJar extends BlockContainerExpand {
 
     @Override
     public TileEntity createNewTileEntity(World w, int meta) {
-        return new TileEssentiaJar(titleType);
+        switch (titleType) {
+            case 0: {
+                return new TileEssentiaJar1();
+            }
+            case 1: {
+                return new TileEssentiaJar2();
+            }
+            case 2: {
+                return new TileEssentiaJar3();
+            }
+            case 3: {
+                return new TileEssentiaJar4();
+            }
+            case 4: {
+                return new TileEssentiaJar5();
+            }
+            default: {
+                return new TileEssentiaJar1();
+            }
+        }
     }
 
     @Override
@@ -220,16 +238,7 @@ public class BlockEssentiaJar extends BlockContainerExpand {
     @Override
     public void registerBlockIcons(IIconRegister icon) {
         iconJar = icon.registerIcon(Reference.TEXTURE_PREFIX + namelist[titleType]);
-        iconLiquid = icon.registerIcon(Reference.TEXTURE_PREFIX + "animatedglow");
+        iconLiquid = icon.registerIcon("thaumcraft:animatedglow");
         blockIcon = icon.registerIcon(Reference.TEXTURE_PREFIX + namelist[titleType]);
-    }
-
-    @Override
-    public void getNBTInfo(NBTTagCompound comp, ArrayList<String> l, int meta) {
-        super.getNBTInfo(comp, l, meta);
-        if (comp.hasKey("AspectFilter")) {
-            Aspect as = Aspect.getAspect(comp.getString("AspectFilter"));
-            l.add("Filter: " + as.getName());
-        }
     }
 }

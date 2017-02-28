@@ -1,7 +1,7 @@
 package CrazyJar.storage;
 
-/**
- * Created by yuany on 2017/2/28.
- */
-public class TileEssentiaJar2 {
+public class TileEssentiaJar2 extends TileEssentiaJar {
+    public TileEssentiaJar2() {
+        super(1);
+    }
 }
